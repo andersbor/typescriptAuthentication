@@ -12,15 +12,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <title>Hello app</title>
+  <title>Authentication</title>
 </head>
 
 <body>
-  <h1>Hello</h1>
+  <h1>Authentication</h1>
   <div id="app">
-    <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+    <input v-model="email" placeholder="Email" type="email">
+    <input v-model="password" placeholder="Password" type="password">
+    <button v-on:click="authenticate(email, password)" class="btn btn-primary">Say hello</button>
+    <div>{{ message }}</div>
   </div>
 
   <script src="bundle.js"></script>
